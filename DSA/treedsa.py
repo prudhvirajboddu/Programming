@@ -1,3 +1,5 @@
+from queue import Queue #For implementing BFS
+
 class BinaryTree():
     def __init__(self,value) -> None:
         self.value=value
@@ -19,7 +21,11 @@ class BinaryTree():
             new_node=BinaryTree(value)
             new_node.rightChild=self.rightChild
             self.rightChild=new_node
-
+  
+    """
+       These are DFS traversals 'cause these go along the tree until it's depth
+       before backtracking another path
+    """
     def inorder(self):
         if self.leftChild:
             self.leftChild.inorder()
@@ -40,6 +46,24 @@ class BinaryTree():
         if self.rightChild:
             self.rightChild.postorder()
         print(self.value)
+
+    def bfs(self):
+        """
+        It traverse level by level of the tree .
+        After traversing all the elements in the level it moves to another level
+        """
+        queue=Queue()
+        queue.put(self)
+
+        while not queue.empty():
+            currentNode=queue.get()
+            print(currentNode.value)
+
+            if currentNode.leftChild:
+                queue.put(currentNode.leftChild)
+            
+            if currentNode.rightChild:
+                queue.put(currentNode.rightChild)
 
 a_node = BinaryTree('a')
 a_node.insertLeft('b')
@@ -72,3 +96,9 @@ a_node.preorder()
 print("$"*20)
 
 a_node.postorder()
+
+print("@"*20)
+
+a_node.bfs()
+
+print(a_node.bfs.__doc__)
