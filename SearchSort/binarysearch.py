@@ -11,7 +11,7 @@ def bs(a,l,r,x):
     else:
         return -1
 a=[2,4,5,6,10,15]
-x=5
+x=11
 result = bs(a, 0, len(a)-1, x)
 if result!=-1:
     print(result)

@@ -16,4 +16,4 @@ def fact(n):
         f=n*fact(n-1)
         lookup[n]=f
     return f
-print(fact(100),time.time()-s,sep="\n") 
+print(fact(125),time.time()-s,sep="\n") 
