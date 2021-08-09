@@ -1,7 +1,9 @@
-def fibonacci(n):
-    fib={}
-    fib[0]=fib[1]=1
-    for i in range(2,n):
-        fib[i]=fib[i-1]+fib[i-2]
-    return fib.values()
-print(fibonacci(10))
+#fibonacci series
+
+def fib(n):
+    a,b = 0,1
+    while a<n:
+        print(a)
+        a,b = b,a+b
+        print()
+fib(100)
