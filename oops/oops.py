@@ -1,30 +1,30 @@
-# class A:
-#     def __init__(self,a=0,b=0) -> None:
-#         self.a = a
-#         self.b = b
-#         print(self.a,self.b)
+class A:
+    def __init__(self,a=0,b=0) -> None:
+        self.a = a
+        self.b = b
+        print(self.a,self.b)
 
-# # @A
-# class B(A):
-#     pass
+# @A
+class B(A):
+    pass
 
-# b=B(44,3)
+b=B(44,3)
 
-# if True:
-#     class A:
-#         i=1234
-#         def __init__(self) -> None:
-#             print("Hello class inside the if block")
-#             print(self.i*2)
+if True:
+    class A:
+        i=1234
+        def __init__(self) -> None:
+            print("Hello class inside the if block")
+            print(self.i*2)
         
     
-#     a=A()
-#     a.counter=85
-#     while a.counter<500:
-#         a.counter = a.counter+10
-#         print(a.counter)
-#         break
-#     del a.counter
+    a=A()
+    a.counter=85
+    while a.counter<500:
+        a.counter = a.counter+10
+        print(a.counter)
+        break
+    del a.counter
 
 class Myclass:
     def f(self):
@@ -34,3 +34,18 @@ class Myclass:
 z = Myclass()
 zf=z.f
 print(zf())
+
+def f1(self, x, y):
+    return min(x, x+y)
+
+class C:
+    f = f1
+
+    def g(self):
+        return 'hello world'
+
+    h = g
+
+c=C()
+
+print(c.f(3,4))
