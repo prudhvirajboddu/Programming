@@ -1,4 +1,4 @@
-__pycache__/*.pyc
+python_concepts/__pycache__/*.pyc
 .devcontainer
 .ipynb_checkpoints
 .virutal_documents
