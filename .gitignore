@@ -1,0 +1,4 @@
+__pycache__/*.pyc
+.devcontainer
+.ipynb_checkpoints
+.virutal_documents
