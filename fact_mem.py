@@ -11,9 +11,8 @@ def fact(n):
         return lookup[n]
     elif n==0 or n==1:
         return 1
-        lookup[n]=1
     else:
         f=n*fact(n-1)
         lookup[n]=f
     return f
-print(fact(100),time.time()-s,sep="\n") 
+print(fact(1),time.time()-s,sep="\n") 
